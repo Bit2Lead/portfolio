@@ -1,0 +1,8 @@
+<h1>blog!</h1>
+
+{% for post in posts%}
+<h3>{{post.title}}</h3>
+<p>{{post.description}}</p>
+<img src="{{post.picture.url}}">
+<p>{{post.date}}</p>
+{%endfor%}

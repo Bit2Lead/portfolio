@@ -1,0 +1,15 @@
+<h1>Portfolio</h1><hr>
+{% load static %}
+
+<a href="{% static 'portfolio/sample.pdf' %}">Download</a><br>
+<img src="{% static 'portfolio/garments.png' %}">
+
+
+{% for portfolio in portfolios %}
+	<h3>{{ portfolio.title }}</h3>
+	<p>{{portfolio.description}}</p>
+	<img src="{{ portfolio.image.url }}">
+	{%if portfolio.url%}
+	<a href="portfolio.url">details</a>
+	{%endif%}
+{% endfor %}
